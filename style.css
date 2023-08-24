@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Multani&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.header {
+    /* border: 2px solid white; */
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("./images/banner.png");
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    /* border: 2px solid red; */
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* !------------------------ to checkboxes------------------------ */
+nav img {
+    /* border: 2px solid hotpink; */
+    width: 200px;
+}
+
+/* todo----------------------------------------------------------------- */
+/* *----------------------------------------------------------------- */
+/* //----------------------------------------------------------------- */
+/* ?----------------------------------------------------------------- */
+.nav-links {
+    /* border: 2px solid yellow; */
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
+    /* border: 2px solid orange; */
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a {
+    /* border: 2px solid pink; */
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+.text-box {
+    /* border: 2px solid blue; */
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.text-box h1 {
+    font-size: 62px;
+    font-family: 'Merriweather', serif;
+}
+
+.text-box p {
+    margin: 10px 0px 40px;
+    /* border: 20px solid #f44336; */
+    font-size: 16px;
+    font-family: 'Noto Sans Multani', sans-serif;
+}
+
+.hero-btn {
+    border: 2px solid white;
+    color: #fff;
+    border-radius: 2px;
+    background-color: rgba(31, 122, 233, 0.087);
+    /* display: inline-block; */
+    text-decoration: none;
+    padding: 12px 24px;
+    font-family: 'Roboto Slab', serif;
+    transition: 0.4s;
+}
+
+.hero-btn:hover {
+    border: 2px solid #f33336;
+    background: #f33336;
+}
+
+nav .fa {
+    display: none;
+}
+
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-links ul li {
+        /* border: 2px solid purple; */
+        display: block;
+        margin-top: 1%;
+    }
+
+    .nav-links {
+        position: absolute;
+        background: #f33336;
+        height: 100vh;
+        width: 200px;
+        color: white;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 1;
+        border-radius: 3px 0px 0px 3px;
+        /* margin-top: 5%; */
+        transition: 0.5s;
+        /* display: none; */
+    }
+
+    nav .fa {
+        display: block;
+        margin: 2px;
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+        /* position: absolute;
+        right: 12px; */
+    }
+
+    .nav-links ul {
+        padding: 20px;
+    }
+}
+
+.courses {
+    /* border: 1px solid red; */
+    width: 80%;
+    text-align: center;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.courses h1 {
+    /* border: 2px solid orange; */
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.courses p {
+    /* background-color: black; */
+    color: #778;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.row {
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+
+.course-col h3 {
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 10px 0px;
+    /* text-align: center; */
+}
+
+.course-col {
+    /* border: 2px solid pink; */
+    flex-basis: 30%;
+    background: #fff3f3;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0 rgba(207, 22, 22, 0.3);
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+}
+
+/* todo------------------------------ CAMPUS SECTIONS ------------------------------ */
+.campus {
+    width: 80%;
+    text-align: center;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.campus-col {
+    /* border: 2px solid green; */
+    /* content: "  "; */
+    /* height: 4vw; */
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    position: relative;
+    overflow: hidden;
+}
+
+.campus-col img {
+    width: 100%;
+    height: 100%;
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(255, 0, 0, 0.6);
+}
+
+.layer h3 {
+    /* border: 2px solid purple; */
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3 {
+    bottom: 50%;
+    opacity: 1;
+}
+
+/* *---------------- Fascities --------------------  */
+.fascilities {
+    /* border: 2px solid red; */
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    /* padding-top: 0px;     to be adjusted */
+}
+
+.fascilities p {
+    margin-top: 16px;
+}
+
+.fascilities-col {
+    /* border: 2px solid rgb(0, 38, 255); */
+    flex-basis: 31%;
+    margin-bottom: 5%;
+    text-align: left;
+    overflow: ;
+}
+
+.fascilities-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.fascilities-col h3 {
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 16px;
+    margin-bottom: 12px;
+}
+
+.fascilities-col p {
+    padding: 0;
+    color: #4f4f4f;
+}
+
+/* todo----------------------- Testimonials -------------------- */
+.testimonials {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.testimonials p {
+    margin-top: 16px;
+}
+
+.testimonial-col {
+    flex-basis: 44%;
+    border-radius: 10px;
+    text-align: left;
+    background: #ff0303d2;
+    cursor: pointer;
+    display: flex;
+    padding: 26px;
+    color: wheat;
+    margin-top: 10px;
+}
+
+.testimonial-col img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 35px;
+    border: 5px solid rgba(255, 255, 255, 0.455);
+}
+
+.testimonial-col p {
+    padding: 0;
+    text-align: left;
+}
+
+.testimonial-col h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+
+@media (max-width: 700px) {
+    .testimonial-col {
+        flex-direction: column;
+        /* text-align: center; */
+    }
+
+    .testimonial-col img {
+        margin: auto;
+        height: 50px;
+        width: 50px;
+    }
+}
+
+/* todo----------------- Contact us ---------------------------- */
+.cta {
+    /* border: 2px solid #5812e2; */
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/banner2.jpg");
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    color: whitesmoke;
+    padding: 100px 0px;
+}
+
+.cta h1 {
+    margin-bottom: 40px;
+    font-size: 1.6em;
+}
+
+/* todo-------------------Footer------------------------------------- */
+.footer {
+    /* border: 2px solid blue; */
+    width: 100%;
+    text-align: center;
+    padding: 30px 0px;
+}
+
+.footer h4 {
+    font-size: 1.7em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.footer p {
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.icons .fa {
+    color: red;
+    margin: 10px 6px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f33336;
+    border-radius: 10px;
+}
